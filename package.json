@@ -1,6 +1,6 @@
 {
   "name": "@angonoka/core",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Modular backend framework with full freedom of will",
   "repository": "https://github.com/nokatheturtle/core",
   "author": "Artemiy Davydov",
@@ -23,10 +23,8 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@types/joi": "^17.2.3",
     "@types/node": "^18.0.5",
     "fastify": "^4.2.1",
-    "joi": "^17.6.0",
     "nodemon": "^2.0.19",
     "np": "^7.6.2",
     "rimraf": "^3.0.2",
