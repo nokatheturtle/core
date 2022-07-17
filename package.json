@@ -1,0 +1,32 @@
+{
+  "name": "@angonoka/core",
+  "version": "0.0.5",
+  "description": "Modular backend framework with full freedom of will",
+  "repository": "https://github.com/nokatheturtle/core",
+  "author": "Artemiy Davydov",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index",
+  "types": "dist/index",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "publish": "np",
+    "start": "nodemon --esm example/server.ts",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p .",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@types/joi": "^17.2.3",
+    "@types/node": "^18.0.5",
+    "fastify": "^4.2.1",
+    "joi": "^17.6.0",
+    "nodemon": "^2.0.19",
+    "np": "^7.6.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}
