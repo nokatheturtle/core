@@ -1,6 +1,5 @@
 {
   "name": "@angonoka/core",
-  "private": false,
   "version": "0.0.5",
   "description": "Modular backend framework with full freedom of will",
   "repository": "https://github.com/nokatheturtle/core",
@@ -12,6 +11,10 @@
   "files": [
     "dist/**/*"
   ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "publish": "np",
     "start": "nodemon --esm example/server.ts",
