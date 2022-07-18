@@ -77,7 +77,7 @@ export const Controller = (route: string) => {
             async (req, res) => {
               try {
                 for (const logic of endpoint._modules) {
-                  const data = await logic(endpoint, req, res);
+                  const data = await logic.bind(this)(endpoint, req, res);
                   if (data) return data;
                 }
                 return await endpoint.bind(this)([req, res]);
