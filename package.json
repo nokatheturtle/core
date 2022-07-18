@@ -17,7 +17,6 @@
     "access": "public"
   },
   "scripts": {
-    "p": "np",
     "start": "nodemon --esm example/server.ts",
     "prepublishOnly": "npm run compile",
     "compile": "npm run clean && tsc -p . && tsc -p tsconfig.esm.json",
