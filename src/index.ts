@@ -46,13 +46,15 @@ export type IEndpoint = ((request: Request) => unknown) & {
 };
 
 export const Controller = (route: string) => {
-  return <T extends { new (...args: any[]): {} }>(Base: T) => {
+  return <T extends { new (...args: any[]): { [key: string]: any } }>(
+    Base: T
+  ) => {
     return class extends Base {
       path = route;
       server?: FastifyInstance;
-      endpoints: Array<string>;
-      isController: true;
-      _modules: IEndpoint["_modules"];
+      endpoints!: Array<keyof typeof this>;
+      isController!: true;
+      _modules!: IEndpoint["_modules"];
 
       constructor(...args: any[]) {
         super(...args);

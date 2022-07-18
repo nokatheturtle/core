@@ -1,13 +1,15 @@
 {
   "name": "@angonoka/core",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Modular backend framework with full freedom of will",
   "repository": "https://github.com/nokatheturtle/core",
   "author": "Artemiy Davydov",
   "license": "MIT",
-  "main": "lib/cjs/index.js",
-  "types": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
+  "exports": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "engines": {
+    "node": ">=14.16"
+  },
   "type": "module",
   "files": [
     "lib/**/*"
@@ -19,7 +21,7 @@
   "scripts": {
     "start": "nodemon --esm example/server.ts",
     "prepublishOnly": "npm run compile",
-    "compile": "npm run clean && tsc -p . && tsc -p tsconfig.esm.json",
+    "compile": "npm run clean && tsc -p .",
     "clean": "rimraf lib"
   },
   "devDependencies": {
